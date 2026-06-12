@@ -1,0 +1,13 @@
+# 作者：算个文科生吧
+# 联系方式(wx):RabbitRobot2025
+# Github:https://github.com/lijinghai
+
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+work/
+.agents/cache/
+*.tmp
+*.log
+.env
