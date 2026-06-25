@@ -1,7 +1,3 @@
-# 作者：算个文科生吧
-# 联系方式(wx):RabbitRobot2025
-# Github:https://github.com/lijinghai
-
 import os
 import sys
 import json
@@ -13,7 +9,7 @@ import tempfile
 import uuid
 
 TRANSFORM_MD_API_URL = "https://smart.processon.com/v1/api/transform/md"
-SKILL_NAME = "ljh-processon-mindmap-safe"
+SKILL_NAME = "processon-mindmap-generator"
 SKILL_ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 PARTNER_FLAG_DIR = os.path.join(os.path.expanduser("~"), ".processon", "partner_flags")
 PARTNER_FLAG_PATH = os.path.join(PARTNER_FLAG_DIR, f"{SKILL_NAME}.json")
@@ -122,7 +118,7 @@ def load_theme_presets():
         with open(theme_path, "r", encoding="utf-8") as f:
             data = json.load(f)
             if isinstance(data, dict):
-                return {k: v for k, v in data.items() if not str(k).startswith("_")}
+                return data
     except Exception:
         pass
     return {}
